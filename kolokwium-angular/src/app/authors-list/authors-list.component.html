@@ -1,0 +1,5 @@
+<h2>Authors: </h2>
+<div *ngFor= "let author of authors">
+    <h3>{{author.firstName}} {{author.lastName}}</h3>
+    <app-author-details [author]="author"></app-author-details>
+</div>
