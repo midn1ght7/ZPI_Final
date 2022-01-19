@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Studia\\ZPI\\Kolokwium\\Templates\\Kolokwium.Api\\Kolokwium.Api.csproj": {}
+    "F:\\Studia\\ZPI\\Kolokwium\\Templates\\kolokwium.Api\\Kolokwium.Api.csproj": {}
   },
   "projects": {
-    "F:\\Studia\\ZPI\\Kolokwium\\Templates\\Kolokwium.Api\\Kolokwium.Api.csproj": {
+    "F:\\Studia\\ZPI\\Kolokwium\\Templates\\kolokwium.Api\\Kolokwium.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\Kolokwium.Api\\Kolokwium.Api.csproj",
+        "projectUniqueName": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\kolokwium.Api\\Kolokwium.Api.csproj",
         "projectName": "Kolokwium.Api",
-        "projectPath": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\Kolokwium.Api\\Kolokwium.Api.csproj",
+        "projectPath": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\kolokwium.Api\\Kolokwium.Api.csproj",
         "packagesPath": "C:\\Users\\Patryk\\.nuget\\packages\\",
-        "outputPath": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\Kolokwium.Api\\obj\\",
+        "outputPath": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\kolokwium.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Patryk\\AppData\\Roaming\\NuGet\\NuGet.Config",

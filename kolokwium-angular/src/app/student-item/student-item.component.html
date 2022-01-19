@@ -1,0 +1,7 @@
+<p>
+    ID: {{student.id}}
+    First Name: {{student.firstName}}
+    Last Name: {{student.lastName}}
+    Age: {{student.age}}
+</p>
+<a [routerLink]="['/student-item-edit', student.id, 'edit']" routerLinkActive="active">Edit</a>

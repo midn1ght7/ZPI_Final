@@ -1,5 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using Kolokwium.Api.Model;
+using Kolokwium.Api.Models;
 
 namespace Kolokwium.Api.DAL {
     public static class DbExtensions {
@@ -7,24 +7,23 @@ namespace Kolokwium.Api.DAL {
             var serviceProvider = serviceCollection.BuildServiceProvider ();
             var dbContext = serviceProvider.GetRequiredService<ApplicationDbContext> ();
             dbContext.AddRange (
-                // example of adding in memory data
-                new Author () {
+                new Student () {
                     Id = 1,
-                    FirstName = "Henryk",
-                    LastName = "Sienkiewicz",
-                    Email = "henryk.sienkiewicz@gmail.com"
+                    FirstName = "Patrycja",
+                    LastName = "Adamczyk",
+                    Age = 23
                 },
-                new Author () {
+                new Student () {
                     Id = 2,
-                    FirstName = "Wisława",
-                    LastName = "Szymborska",
-                    Email = "wislawa.szymborska@gmail.com"
+                    FirstName = "Robert",
+                    LastName = "Bubica",
+                    Age = 21
                 },
-                new Author () {
+                new Student (){
                     Id = 3,
-                    FirstName = "Czesław",
-                    LastName = "Miłosz",
-                    Email = "czeslaw.milosz@gmail.com"
+                    FirstName = "Adam",
+                    LastName = "Małysz",
+                    Age = 20
                 }
             );
             dbContext.SaveChanges ();

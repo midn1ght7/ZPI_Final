@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jMmudkLFfm7VJHBCZki1FpcVOnznlwZZoYFUmSPKgpnh3rqXVAP2tuQ1ZYOITFNGscYFaYGM7lfV34oEwzFfvA==",
+  "dgSpecHash": "+idv/HqHhKtV83EQeRNaISp1WCp5DiBF5LLVNFd0TcVELGfJ/B4KBAG9Ocm4udDMqF1tb3POpVIjuMOFVMb1jg==",
   "success": true,
-  "projectFilePath": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\Kolokwium.Api\\Kolokwium.Api.csproj",
+  "projectFilePath": "F:\\Studia\\ZPI\\Kolokwium\\Templates\\kolokwium.Api\\Kolokwium.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patryk\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Patryk\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
