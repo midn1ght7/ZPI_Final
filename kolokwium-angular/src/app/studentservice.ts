@@ -22,6 +22,7 @@ export class StudentService{
     }
 
     private add(student: Student) : (collection: Student[]) => Student[] {
+        this.load();
         return (collection: Student[]) => [...collection, student];
     }
 
