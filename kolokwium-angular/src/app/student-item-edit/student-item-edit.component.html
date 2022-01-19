@@ -1,12 +1,12 @@
 <div *ngIf="student$|async as student">
     <label for="edit-fname">First Name: </label>
-    <input id="edit-fname" type="text" value={{student.firstName}}>
+    <input #fname id="edit-fname" type="text" value={{student.firstName}}>
     <br>
     <label for="edit-lname">Last Name: </label>
-    <input id="edit-lname" type="text" value={{student.lastName}}>
+    <input #lname id="edit-lname" type="text" value={{student.lastName}}>
     <br>
     <label for="edit-age">Age: </label>
-    <input id="edit-age" type="text" value={{student.age}}>
+    <input #age id="edit-age" type="text" value={{student.age}}>
     <br>
-    <button onclick="submitEdit(edit-fname.value, edit-lname.value, edit-age.value)">Update</button>
+    <button (click)="submitEdit(fname.value, lname.value, age.value)">Update</button>
 </div>

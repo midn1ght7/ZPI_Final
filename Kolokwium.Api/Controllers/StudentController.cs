@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Kolokwium.Api.Models;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Kolokwium.Api.Controllers{
     [ApiController]
@@ -37,9 +38,12 @@ namespace Kolokwium.Api.Controllers{
         [HttpPut]
         public async Task<IActionResult> editStudent(Student student){
             try{
-                DbContext.Update(student);
+                var studentdb = DbContext.Students.First(a => a.Id == student.Id);
+                studentdb.FirstName = student.FirstName;
+                studentdb.LastName = student.LastName;
+                studentdb.Age = student.Age;
                 await DbContext.SaveChangesAsync();
-                return Ok(student);
+                return Ok(studentdb);
             }
             catch{
                 return this.Problem(

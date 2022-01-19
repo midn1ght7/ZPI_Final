@@ -3,6 +3,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Student} from 'src/app/models/student';
+import { StudentItemEditComponent } from './student-item-edit/student-item-edit.component';
 
 @Injectable({
     providedIn: 'root'
@@ -10,12 +11,19 @@ import {Student} from 'src/app/models/student';
 
 export class StudentService{
     private studentCollectionChange: BehaviorSubject<Student[]>;
+    private actions$: BehaviorSubject<(student: Student[]) => Student[]>;
+    
 
     students$: Observable<Student[]>;
 
     constructor (private client: HttpClient){
+        this.actions$ = new BehaviorSubject((a) => a);
         this.studentCollectionChange = new BehaviorSubject([] as Student[]);
         this.students$ = this.studentCollectionChange.asObservable();
+    }
+
+    private add(student: Student) : (collection: Student[]) => Student[] {
+        return (collection: Student[]) => [...collection, student];
     }
 
     load(){
@@ -34,6 +42,7 @@ export class StudentService{
             lastName: lname,
             age: age
         };
-        this.client.put<Student>("http://localhost:5000/Student", student);
+        this.client.put<Student>("http://localhost:5000/Student", student).subscribe(res => this.actions$.next(this.add(res)));
+        console.log("editStudent sent put");
     }
 }

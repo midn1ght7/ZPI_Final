@@ -26,6 +26,7 @@ export class StudentItemEditComponent implements OnInit {
   submitEdit(fname: string, lname:string, age:string)
   {
     this.studentService.editStudent(this.route.snapshot.params['id'], fname, lname, Number(age));
+    console.log("submitEdit exited");
   }
 
   ngOnInit(): void {
