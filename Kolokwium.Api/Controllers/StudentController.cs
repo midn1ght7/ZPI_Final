@@ -35,6 +35,21 @@ namespace Kolokwium.Api.Controllers{
             }
         }
 
+        [HttpPost]
+        public async Task<IActionResult> addStudent(Student student){
+            try{
+                DbContext.Students.Add(student);
+                await DbContext.SaveChangesAsync();
+                return Ok(student);
+            }
+            catch{
+                return this.Problem(
+                    detail: "There was an error",
+                    title: "Error"
+                );
+            }
+        }
+
         [HttpPut]
         public async Task<IActionResult> editStudent(Student student){
             try{

@@ -1,0 +1,12 @@
+<div>
+    <label for="fname">First Name: </label>
+    <input #fname id="fname" type="text">
+    <br>
+    <label for="lname">Last Name: </label>
+    <input #lname id="lname" type="text">
+    <br>
+    <label for="age">Age: </label>
+    <input #age id="age" type="text">
+    <br>
+    <button (click)="submitAdd(fname.value, lname.value, age.value)">Add</button>
+</div>

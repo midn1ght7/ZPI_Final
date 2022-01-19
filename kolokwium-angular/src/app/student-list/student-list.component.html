@@ -1,4 +1,5 @@
 <h2>Students List</h2>
+<a [routerLink]="['/student-item-add']" routerLinkActive="active"><button>Add Student</button></a>
 <div *ngFor = "let student of students$ | async">
     <!-- <h3>{{student.firstName}}</h3> -->
     <app-student-item [student] = "student"></app-student-item>

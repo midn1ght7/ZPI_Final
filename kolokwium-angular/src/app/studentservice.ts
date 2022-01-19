@@ -3,7 +3,6 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Student} from 'src/app/models/student';
-import { StudentItemEditComponent } from './student-item-edit/student-item-edit.component';
 
 @Injectable({
     providedIn: 'root'
@@ -34,6 +33,10 @@ export class StudentService{
     findById(id: number): Observable <Student | undefined> {
         return this.students$.pipe(map((students:Student[]) => students.find(a => a.id === id)));
     }
+
+    addStudent(student: Student): void{
+        this.client.post<Student>("http://localhost:5000/Student", student).subscribe(res => this.actions$.next(this.add(res)));
+    } 
 
     editStudent(id: number, fname:string, lname:string, age: number){
         var student: Student = {
