@@ -9,9 +9,8 @@ interface Props{
 export const StudentListComponent: React.FC<Props> = ({students}) => {
     return (
         <div>
-            {students.map((item,index) => (
-                <StudentComponent key={index + item.id} student = {item}>
-                </StudentComponent>
+            {students.map(item => (
+                <StudentComponent key={item.id} student = {item}></StudentComponent>
             ))}
         </div>
     );
