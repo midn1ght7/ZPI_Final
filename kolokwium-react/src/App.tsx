@@ -25,7 +25,7 @@ function App() {
     fetch('http://localhost:5000/Student', request)
     .then((res) => res.json())
     .then((res) => {
-      setStudentState([...studentState, res.value]);
+      setStudentState([...studentState, res]);
     })
   }
 
